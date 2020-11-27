@@ -10,6 +10,7 @@ namespace CS_BXOR_DLL_Example
         {
             // First create a byte array from a string
             byte[] byteArray = Encoding.UTF8.GetBytes("This is a plaintext string.");
+            Console.WriteLine();
             Console.WriteLine("Initial string: " + Encoding.ASCII.GetString(byteArray));
 
             // Then encode the byte array using a provided byte key
@@ -22,6 +23,7 @@ namespace CS_BXOR_DLL_Example
             byte[] decodedByteArray = encodedByteArray;
             BXORBytes(decodedByteArray, decodedByteArray.Length, 106);
             Console.WriteLine("Decoded string: " + Encoding.ASCII.GetString(decodedByteArray));
+            Console.WriteLine();
         }
 
         // This DLL is available at https://github.com/graememeyer/BXOR-DLL
